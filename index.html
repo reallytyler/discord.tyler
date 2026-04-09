@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ban Appeal | Tyler's Discord</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- SCRAMBLED CSS -->
+    <link rel="stylesheet" href="assets/css/main.v2.88a1f.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Ban Appeal</h1>
+        <p class="subtitle">Submit your request to the server staff</p>
+        
+        <form id="appealForm">
+            <div id="section1" class="section active">
+                <div class="input-box">
+                    <input type="text" id="username" placeholder="Discord Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="userid" placeholder="Discord User ID" required>
+                    <i class='bx bxs-id-card'></i>
+                </div>
+                <button type="button" class="btn" onclick="UI.next(2)">Continue</button>
+            </div>
+
+            <div id="section2" class="section">
+                <div class="input-box textarea-box">
+                    <textarea id="whyunban" placeholder="Why should we unban you?" required></textarea>
+                </div>
+                <div class="input-box textarea-box">
+                    <textarea id="whyban" placeholder="Reason for your ban (if known)"></textarea>
+                </div>
+                <button type="button" class="btn" id="submitBtn">Submit Appeal</button>
+                <button type="button" class="btn back-btn" onclick="UI.next(1)">Go Back</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="notification" class="notif">Success! Appeal Sent.</div>
+
+    <script src="assets/js/chunks.7e2b9.js"></script>
+    <script src="assets/js/app.bundle.d41d8.js"></script>
+</body>
+</html>
