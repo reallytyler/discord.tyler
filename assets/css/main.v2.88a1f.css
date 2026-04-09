@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; }
+body {
+    display: flex; justify-content: center; align-items: center; min-height: 100vh;
+    background: #0f0c29;
+    background: linear-gradient(rgba(15, 12, 41, 0.7), rgba(48, 43, 99, 0.7)),
+                url('https://images.unsplash.com/photo-1477346611705-65d1883cee1e?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover; background-position: center; overflow: hidden;
+}
+body::before {
+    content: ""; position: absolute; width: 200%; height: 200%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 100s linear infinite; opacity: 0.5; z-index: -1;
+}
+@keyframes moveStars { from { transform: translate(0, 0); } to { transform: translate(-50%, -50%); } }
+.wrapper {
+    width: 420px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px) saturate(150%); border-radius: 24px; padding: 40px; position: relative; z-index: 10;
+}
+h1 { font-size: 32px; text-align: center; margin-bottom: 10px; font-weight: 700; color: #fff; }
+.subtitle { text-align: center; font-size: 13px; opacity: 0.7; margin-bottom: 30px; color: #fff; }
+.section { display: none; }
+.section.active { display: block; animation: fadeIn 0.5s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+.input-box { position: relative; width: 100%; margin: 20px 0; }
+.input-box input, .input-box textarea {
+    width: 100%; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px; font-size: 15px; color: #fff; padding: 15px 45px 15px 20px; outline: none;
+}
+.input-box.textarea-box { height: 120px; }
+.input-box.textarea-box textarea { height: 100%; resize: none; }
+.input-box i { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: #fff; opacity: 0.6; }
+.btn {
+    width: 100%; padding: 14px; background: #fff; border: none; border-radius: 12px;
+    cursor: pointer; font-size: 16px; color: #2c2f33; font-weight: 700; margin-top: 10px;
+}
+.btn:hover { background: #a29bfe; color: #fff; }
+.btn.back-btn { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+.notif {
+    position: fixed; top: 20px; right: 20px; background: rgba(46, 204, 113, 0.9);
+    padding: 15px 25px; border-radius: 8px; color: white; display: none;
+}
